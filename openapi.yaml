@@ -702,7 +702,7 @@ components:
         format: int64
         example: 12345
     ProductNameQueryParameter:
-      name: name
+      name: productName
       in: query
       description: The name of the product
       schema:
