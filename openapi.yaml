@@ -156,20 +156,60 @@ paths:
       description: Get a list of products with optional query parameters to filter the result list
       operationId: getProducts
       parameters:
-        - name: productQuery
+        - name: productName
           in: query
-          description: The query to filter products
+          description: The name of the product
           required: false
           schema:
-            - $ref: '#/components/parameters/ProductNameQueryParameter'
-            - $ref: '#/components/parameters/ProductCategoryQueryParameter'
-            - $ref: '#/components/parameters/ProductBrandQueryParameter'
-            - $ref: '#/components/parameters/ProductColorQueryParameter'
-            - $ref: '#/components/parameters/ProductSizeQueryParameter'
-            - $ref: '#/components/parameters/ProductWeightQueryParameter'
-            - $ref: '#/components/parameters/ProductDimensionsQueryParameter'
-            - $ref: '#/components/parameters/ProductSkuQueryParameter'
-            - $ref: '#/components/parameters/ProductUpcQueryParameter'
+            $ref: '#/components/parameters/ProductNameQueryParameter'
+        - name: productCategory
+          in: query
+          description: The category of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductCategoryQueryParameter'
+        - name: productBrand
+          in: query
+          description: The brand of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductBrandQueryParameter'
+        - name: productColor
+          in: query
+          description: The color of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductColorQueryParameter'
+        - name: productSize
+          in: query
+          description: The size of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductSizeQueryParameter'
+        - name: productWeight
+          in: query
+          description: The weight of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductWeightQueryParameter'
+        - name: productDimensions
+          in: query
+          description: The dimensions of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductDimensionsQueryParameter'
+        - name: productSku
+          in: query
+          description: The SKU of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductSkuQueryParameter'
+        - name: productUpc
+          in: query
+          description: The UPC of the product
+          required: false
+          schema:
+            $ref: '#/components/parameters/ProductUpcQueryParameter'
       responses:
         '200':
           description: A list of products
@@ -284,18 +324,48 @@ paths:
       description: Get a list of workouts with optional query parameters to filter the result list
       operationId: getWorkouts
       parameters:
-        - name: workoutQuery
+        - name: workoutName
           in: query
-          description: The query to filter workouts
+          description: The name of the workout
           required: false
           schema:
-            - $ref: '#/components/parameters/WorkoutNameQueryParameter'
-            - $ref: '#/components/parameters/WorkoutTypeQueryParameter'
-            - $ref: '#/components/parameters/WorkoutDurationQueryParameter'
-            - $ref: '#/components/parameters/WorkoutIntensityQueryParameter'
-            - $ref: '#/components/parameters/WorkoutEquipmentNeededQueryParameter'
-            - $ref: '#/components/parameters/WorkoutTargetMuscleGroupQueryParameter'
-            - $ref: '#/components/parameters/WorkoutCaloriesBurnedQueryParameter'
+            $ref: '#/components/parameters/WorkoutNameQueryParameter'
+        - name: workoutType
+          in: query
+          description: The type of the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutTypeQueryParameter'
+        - name: workoutDuration
+          in: query
+          description: The duration of the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutDurationQueryParameter'
+        - name: workoutIntensity
+          in: query
+          description: The intensity of the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutIntensityQueryParameter'
+        - name: workoutEquipmentNeeded
+          in: query
+          description: The equipment needed for the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutEquipmentNeededQueryParameter'
+        - name: workoutTargetMuscleGroup
+          in: query
+          description: The target muscle group of the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutTargetMuscleGroupQueryParameter'
+        - name: workoutCaloriesBurned
+          in: query
+          description: The calories burned during the workout
+          required: false
+          schema:
+            $ref: '#/components/parameters/WorkoutCaloriesBurnedQueryParameter'
       responses:
         '200':
           description: A list of workouts
