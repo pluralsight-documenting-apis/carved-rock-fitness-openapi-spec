@@ -437,10 +437,7 @@ paths:
       description: Get a workout by ID
       operationId: getWorkoutById
       parameters:
-        - name: workoutId
-          in: path
-          schema:
-            - $ref: '#/components/parameters/WorkoutIdPathParameter'
+        - $ref: '#/components/parameters/WorkoutIdPathParameter'
       responses:
         '200':
           description: A workout
@@ -697,6 +694,7 @@ components:
       name: id
       in: path
       description: The ID of the customer
+      required: true
       schema:
         type: integer
         format: int64
@@ -769,6 +767,7 @@ components:
       name: productId
       in: path
       description: The ID of the product
+      required: true
       schema:
         type: integer
         format: int64
@@ -828,6 +827,7 @@ components:
         name: workoutId
         in: path
         description: The ID of the workout
+        required: true
         schema:
             type: integer
             format: int64
