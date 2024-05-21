@@ -279,48 +279,13 @@ paths:
       description: Get a list of workouts with optional query parameters to filter the result list
       operationId: getWorkouts
       parameters:
-        - name: workoutName
-          in: query
-          description: The name of the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutNameQueryParameter'
-        - name: workoutType
-          in: query
-          description: The type of the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutTypeQueryParameter'
-        - name: workoutDuration
-          in: query
-          description: The duration of the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutDurationQueryParameter'
-        - name: workoutIntensity
-          in: query
-          description: The intensity of the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutIntensityQueryParameter'
-        - name: workoutEquipmentNeeded
-          in: query
-          description: The equipment needed for the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutEquipmentNeededQueryParameter'
-        - name: workoutTargetMuscleGroup
-          in: query
-          description: The target muscle group of the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutTargetMuscleGroupQueryParameter'
-        - name: workoutCaloriesBurned
-          in: query
-          description: The calories burned during the workout
-          required: false
-          schema:
-            $ref: '#/components/parameters/WorkoutCaloriesBurnedQueryParameter'
+        - $ref: '#/components/parameters/WorkoutNameQueryParameter'
+        - $ref: '#/components/parameters/WorkoutTypeQueryParameter'
+        - $ref: '#/components/parameters/WorkoutDurationQueryParameter'
+        - $ref: '#/components/parameters/WorkoutIntensityQueryParameter'
+        - $ref: '#/components/parameters/WorkoutEquipmentNeededQueryParameter'
+        - $ref: '#/components/parameters/WorkoutTargetMuscleGroupQueryParameter'
+        - $ref: '#/components/parameters/WorkoutCaloriesBurnedQueryParameter'
       responses:
         '200':
           description: A list of workouts
