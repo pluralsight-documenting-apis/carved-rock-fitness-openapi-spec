@@ -824,11 +824,11 @@ components:
         format: int32
         example: 500
     WorkoutIdPathParameter:
-        name: workoutId
-        in: path
-        description: The ID of the workout
-        required: true
-        schema:
-          type: integer
-          format: int64
-          example: 12345
+      name: workoutId
+      in: path
+      description: The ID of the workout
+      required: true
+      schema:
+        type: integer
+        format: int64
+        example: 12345
