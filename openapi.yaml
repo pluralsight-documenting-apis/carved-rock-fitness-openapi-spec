@@ -777,58 +777,58 @@ components:
       in: query
       description: The name of the workout
       schema:
-          type: string
-          example: "Cardio Blast"
+        type: string
+        example: "Cardio Blast"
     WorkoutTypeQueryParameter:
       name: type
       in: query
       description: The type of the workout
       schema:
-          type: string
-          example: "Cardio"
+        type: string
+        example: "Cardio"
     WorkoutDurationQueryParameter:
       name: duration
       in: query
       description: The duration of the workout
       schema:
-          type: integer
-          format: int32
-          example: 60
+        type: integer
+        format: int32
+        example: 60
     WorkoutIntensityQueryParameter:
       name: intensity
       in: query
       description: The intensity of the workout
       schema:
-          type: string
-          example: "High"
+        type: string
+        example: "High"
     WorkoutEquipmentNeededQueryParameter:
       name: equipmentNeeded
       in: query
       description: The equipment needed for the workout
       schema:
-          type: string
-          example: "Treadmill"
+        type: string
+        example: "Treadmill"
     WorkoutTargetMuscleGroupQueryParameter:
       name: targetMuscleGroup
       in: query
       description: The target muscle group of the workout
       schema:
-          type: string
-          example: "Legs"
+        type: string
+        example: "Legs"
     WorkoutCaloriesBurnedQueryParameter:
       name: caloriesBurned
       in: query
       description: The calories burned during the workout
       schema:
-          type: integer
-          format: int32
-          example: 500
+        type: integer
+        format: int32
+        example: 500
     WorkoutIdPathParameter:
         name: workoutId
         in: path
         description: The ID of the workout
         required: true
         schema:
-            type: integer
-            format: int64
-            example: 12345
+          type: integer
+          format: int64
+          example: 12345
