@@ -156,60 +156,15 @@ paths:
       description: Get a list of products with optional query parameters to filter the result list
       operationId: getProducts
       parameters:
-        - name: productName
-          in: query
-          description: The name of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductNameQueryParameter'
-        - name: productCategory
-          in: query
-          description: The category of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductCategoryQueryParameter'
-        - name: productBrand
-          in: query
-          description: The brand of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductBrandQueryParameter'
-        - name: productColor
-          in: query
-          description: The color of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductColorQueryParameter'
-        - name: productSize
-          in: query
-          description: The size of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductSizeQueryParameter'
-        - name: productWeight
-          in: query
-          description: The weight of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductWeightQueryParameter'
-        - name: productDimensions
-          in: query
-          description: The dimensions of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductDimensionsQueryParameter'
-        - name: productSku
-          in: query
-          description: The SKU of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductSkuQueryParameter'
-        - name: productUpc
-          in: query
-          description: The UPC of the product
-          required: false
-          schema:
-            $ref: '#/components/parameters/ProductUpcQueryParameter'
+        - $ref: '#/components/parameters/ProductNameQueryParameter'
+        - $ref: '#/components/parameters/ProductCategoryQueryParameter'
+        - $ref: '#/components/parameters/ProductBrandQueryParameter'
+        - $ref: '#/components/parameters/ProductColorQueryParameter'
+        - $ref: '#/components/parameters/ProductSizeQueryParameter'
+        - $ref: '#/components/parameters/ProductWeightQueryParameter'
+        - $ref: '#/components/parameters/ProductDimensionsQueryParameter'
+        - $ref: '#/components/parameters/ProductSkuQueryParameter'
+        - $ref: '#/components/parameters/ProductUpcQueryParameter'
       responses:
         '200':
           description: A list of products
